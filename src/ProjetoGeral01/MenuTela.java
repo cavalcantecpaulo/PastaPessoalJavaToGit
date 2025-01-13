@@ -7,45 +7,51 @@ public class MenuTela {
         int escolhaInicial;
         ParOuImpar parOuImpar = new ParOuImpar();
         Tabuada tabuada = new Tabuada();
-        Calculadora calculadora = new Calculadora();
         MenuCalculadora menuCalculadora = new MenuCalculadora();
-
+        menuTemperatura menuTemperatura = new menuTemperatura();
+        DilemaDosPrisioneiros dilema = new DilemaDosPrisioneiros();
         System.out.println("    1.  Calculadora Simples");
         System.out.println("    2.  Tabuada de número x");
         System.out.println("    3.  Verificar se número x é Par/Ímpar");
         System.out.println("    4.  Conversor de Temperatura");
-        System.out.println("    5.  Em desenvolvimento...");
+        System.out.println("    5.  O Dilema dos Prisioneiros");
         System.out.println("    6.  Em desenvolvimento...");
         System.out.println("    7.  Em desenvolvimento...");
-        System.out.println("    8.  Em desenvolvimento...");
+        System.out.println("    8.  Encerrar Programa");
         System.out.print("Escolha uma opção: ");
         escolhaInicial = opcInicial.nextInt();
 
         switch (escolhaInicial) {
             case 1:
-                menuCalculadora.mostrarMenuCalculadora();
+                menuCalculadora.mostrarMenuCalculadora(opcInicial);
                 break;
             case 2:
-               tabuada.mostrarTabuada();
+                tabuada.mostrarTabuada();
                 break;
             case 3:
                 parOuImpar.verificarParOuImpar();
                 break;
-//            case 4:
-//                System.out.println("case 4");
-//                break;
-//            case 5:
-//                System.out.println("case 5");
-//                break;
-//            case 6:
-//                System.out.println("case 6");
-//                break;
-//            case 7:
-//                System.out.println("case 7");
-//                break;
-//            case 8:
-//                System.out.println("case 8");
-//                break;
+            case 4:
+                menuTemperatura.mostrarMenuConversao(opcInicial);
+                break;
+            case 5:
+                dilema.miniJogo();
+                break;
+            case 6:
+                System.out.println("case 6");
+                System.out.println("Em desenvolvimento...");
+                break;
+            case 7:
+                System.out.println("case 7");
+                System.out.println("Em desenvolvimento...");
+                break;
+            case 8:
+                System.out.println("case 8");
+                System.out.println(" Em desenvolvimento...");
+                break;
+            default:
+                System.out.println("Opção Inválida!");
+                break;
         }
     }
 }
