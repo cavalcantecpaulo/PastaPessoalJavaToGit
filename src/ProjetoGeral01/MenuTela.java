@@ -10,12 +10,13 @@ public class MenuTela {
         MenuCalculadora menuCalculadora = new MenuCalculadora();
         menuTemperatura menuTemperatura = new menuTemperatura();
         DilemaDosPrisioneiros dilema = new DilemaDosPrisioneiros();
+        JogoAdivinhacao jogo = new JogoAdivinhacao();
         System.out.println("    1.  Calculadora Simples");
         System.out.println("    2.  Tabuada de número x");
         System.out.println("    3.  Verificar se número x é Par/Ímpar");
         System.out.println("    4.  Conversor de Temperatura");
         System.out.println("    5.  O Dilema dos Prisioneiros");
-        System.out.println("    6.  Em desenvolvimento...");
+        System.out.println("    6.  Jogo de adivinhação");
         System.out.println("    7.  Em desenvolvimento...");
         System.out.println("    8.  Encerrar Programa");
         System.out.print("Escolha uma opção: ");
@@ -38,8 +39,7 @@ public class MenuTela {
                 dilema.miniJogo();
                 break;
             case 6:
-                System.out.println("case 6");
-                System.out.println("Em desenvolvimento...");
+               jogo.JogarAdivinhacao();
                 break;
             case 7:
                 System.out.println("case 7");

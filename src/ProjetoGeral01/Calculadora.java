@@ -74,7 +74,6 @@ public class Calculadora {
         num1 = entradaDeNumero.nextInt();
 
         if(num1==0){
-            num1 = 0;
             System.out.print("Fatorial = 1");
         } else {
             for (i = num1; i > 0; i--) {
