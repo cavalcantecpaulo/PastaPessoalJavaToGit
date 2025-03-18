@@ -8,6 +8,6 @@ public class ProjetoPrincipal01 {
         Scanner opc = new Scanner(System.in);
         MenuTela menu = new MenuTela();
 
-        menu.iniciarMenu(opc);
+            menu.iniciarMenu(opc);
     }
 }

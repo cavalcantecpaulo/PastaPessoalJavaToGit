@@ -9,7 +9,7 @@ public class DilemaDosPrisioneiros {
 
     public void miniJogo() {
         System.out.println("\n\nDilema dos Prisioneiros");
-        System.out.println("\nDois Suspeitos A(Camacho) e B(Patrick) foram presos juntos pela polícia.");
+        System.out.println("\nDois Suspeitos A(Camacho) e B(Patrick) foram presos pela polícia.");
         System.out.println("\nNão há provas o suficiente para condená-los, então você decidirá o futuro dos dois.");
         System.out.println("Como estão em celas separadas,decida se eles responderão pra se beneficiar individualmente!!!");
 

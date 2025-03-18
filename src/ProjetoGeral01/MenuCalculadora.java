@@ -36,8 +36,7 @@ public class MenuCalculadora {
                 calculadora.fatorialNumero();
                 break;
             case 6:
-                System.out.println("Você escolheu 6 - Potenciação");
-                System.out.println("Em desenvolvimento...");
+                calculadora.potenciarNumero();
                 break;
             case 7:
                 System.out.println("Você escolheu 7.  Retornar ao Menu Inicial");
