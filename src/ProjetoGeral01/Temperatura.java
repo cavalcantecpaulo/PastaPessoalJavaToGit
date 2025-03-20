@@ -8,6 +8,7 @@ public class Temperatura {
     double kelvin;
     Scanner entradaDeTemperatura = new Scanner(System.in);
 
+
     public void converterCelsiusToFahrenheit() {
         System.out.println("Digite em Celsius, a temperatura que quer converter à Fahrenheit: ");
         celsius = entradaDeTemperatura.nextDouble();

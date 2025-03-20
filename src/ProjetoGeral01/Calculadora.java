@@ -3,89 +3,107 @@ package ProjetoGeral01;
 import java.util.Scanner;
 
 public class Calculadora {
-    int num1;
-    int num2;
-    int soma;
-    int subtracao;
-    int multiplicacao;
-    int divisao;
-    int potencia;
+    int num1,num2,soma,subtracao,multiplicacao,divisao,potencia;
     double resto;
     char loop;
-    Scanner entradaDeNumero = new Scanner(System.in);
-    Scanner entradaDeChar = new Scanner(System.in);
+    Scanner entrada = new Scanner(System.in);
 
     public void somarDoisNumeros() {
             System.out.println("Você escolheu 1 - Adição");
             System.out.print("Digite o primeiro número: ");
-            num1 = entradaDeNumero.nextInt();
+            num1 = entrada.nextInt();
+            entrada.nextLine();
             System.out.println("Você digitou o número " + num1);
             System.out.print("\nDigite o segundo número: ");
-            num2 = entradaDeNumero.nextInt();
+            num2 = entrada.nextInt();
+            entrada.nextLine();
             System.out.println("Você digitou o número " + num2);
             soma = num1+num2;
 
         do{
             int numero;
             System.out.println("Deseja digitar outro numero? (S/N)");
-            loop = entradaDeChar.next().charAt(0);
-            if(loop == 'n' || loop =='N' ){
+            loop = entrada.next().charAt(0);
+            loop = Character.toUpperCase(loop);
+            entrada.nextLine();
+
+            if(loop =='N'){
                 System.out.println(" O resultado é = " + soma);
                 return;
             }
+
             System.out.print("Qual número deseja somar: ");
-            numero = entradaDeNumero.nextInt();
+            numero = entrada.nextInt();
+            entrada.nextLine();
             soma = soma + numero;
-        } while(loop == 'S' || loop == 's');
-        System.out.println(" O resultado é =  " + soma);
+
+            System.out.println("O resultado é = " + soma);
+        } while(loop == 'S');
+        System.out.println("O resultado é = " + soma);
     }
 
     public void subtrairDoisNumeros(){
         System.out.println("Você escolheu 2 - Subtração");
         System.out.print("Digite o primeiro número: ");
-        num1 = entradaDeNumero.nextInt();
+        num1 = entrada.nextInt();
+        entrada.nextLine();
         System.out.println("Você digitou o número " + num1);
-        System.out.print("\nDigite o segundo número, para subtrair: ");
-        num2 = entradaDeNumero.nextInt();
+        System.out.print("\nDigite o segundo número, para subtrair de "+ num1 + ": ");
+        num2 = entrada.nextInt();
+        entrada.nextLine();
         System.out.println("Você digitou o número " + num2);
         subtracao = num1-num2;
         do{
             int numero;
+            System.out.println("O resultado é = " + subtracao);
             System.out.println("Deseja digitar outro numero? (S/N)");
-            loop = entradaDeChar.next().charAt(0);
-            if(loop == 'n' || loop =='N' ){
-                System.out.println(" O resultado é = " + subtracao);
+            loop = entrada.next().charAt(0);
+            loop = Character.toUpperCase(loop);
+            entrada.nextLine();
+
+            if(loop =='N'){
+                System.out.println("O resultado é = " + subtracao);
                 return;
             }
+            else if(loop!='N' && loop !='S'){
+                System.out.println("Erro");
+                break;
+            }
             System.out.print("Qual número deseja subtrair de " + subtracao + ": ");
-            numero = entradaDeNumero.nextInt();
+            numero = entrada.nextInt();
+            entrada.nextLine();
             subtracao = subtracao - numero;
-        } while(loop == 'S' || loop == 's');
+        } while(loop == 'S');
         System.out.println(" O resultado é =  " + soma);
         }
 
     public void multiplicarDoisNumeros(){
         System.out.println("Você escolheu 3 - Multiplicação");
         System.out.print("Digite o primeiro número: ");
-        num1 = entradaDeNumero.nextInt();
+        num1 = entrada.nextInt();
+        entrada.nextLine();
+
         System.out.println("Você digitou o número " + num1);
-        System.out.print("\nDigite o segundo número, para multiplicar: ");
-        num2 = entradaDeNumero.nextInt();
-        System.out.print("Digite o número para calcular o fatorial: ");
+        System.out.print("\nDigite o segundo número, para multiplicar por " + num1 + ": ");
+        num2 = entrada.nextInt();
+        entrada.nextLine();
+
+        multiplicacao = num1 * num2;
+
         if(num1==0 || num2==0){
-            System.out.print("Resultado = 0");
-        }else {
-            multiplicacao = num1 * num2;
-            System.out.println(num1 + " X " + num2 + " = " + multiplicacao);
+            multiplicacao = 0;
         }
+        System.out.println(num1 + " X " + num2 + " = " + multiplicacao);
     }
     public void dividirDoisNumeros(){
         System.out.println("Você escolheu 4 - Divisão");
         System.out.print("Digite o primeiro número: ");
-        num1 = entradaDeNumero.nextInt();
+        num1 = entrada.nextInt();
+        entrada.nextLine();
         System.out.println("Você digitou o número " + num1);
         System.out.print("\nDigite o segundo número, para dividir: ");
-        num2 = entradaDeNumero.nextInt();
+        num2 = entrada.nextInt();
+        entrada.nextLine();
         System.out.println("Você digitou o número " + num2);
         if(num1==0 || num2==0){
             System.out.println("Divisão Inválida!!! " + num2);
@@ -93,7 +111,7 @@ public class Calculadora {
             divisao = num1/num2;
             resto = num1%num2;
             System.out.println(num1 + "/" + num2 + " = " + divisao);
-            System.out.println("Resto da divisão= " + resto);
+            System.out.println("Resto da divisão = " + resto);
         }
     }
     public void fatorialNumero(){
@@ -101,8 +119,8 @@ public class Calculadora {
         int i;
         System.out.println("Você escolheu 5 - Fatorial");
         System.out.print("Digite o número para calcular o fatorial dele: ");
-        num1 = entradaDeNumero.nextInt();
-
+        num1 = entrada.nextInt();
+         entrada.nextLine();
         if(num1==0){
             System.out.print("Fatorial = 1");
         } else {
@@ -115,10 +133,12 @@ public class Calculadora {
     public void potenciarNumero(){
         System.out.println("Você escolheu 6 - Potenciação");
         System.out.print("Digite o número que quer ver na forma de potência: ");
-        num1 = entradaDeNumero.nextInt();
+        num1 = entrada.nextInt();
+        entrada.nextLine();
         System.out.println("Você digitou o número " + num1);
         System.out.print("\nDigite a base que deseja potenciar no número " + num1 + ": ");
-        num2 = entradaDeNumero.nextInt();
+        num2 = entrada.nextInt();
+        entrada.nextLine();
         System.out.println("Você digitou o número " + num2);
         if (num1 == 0) {
            potencia = 1;

@@ -3,11 +3,12 @@ package ProjetoGeral01;
 import java.util.Scanner;
 
 public class MenuCalculadora {
-    public void mostrarMenuCalculadora(Scanner opcCalculadora){
+    public void mostrarMenuCalculadora(){
         int operacao;
         Calculadora calculadora = new Calculadora();
         MenuTela menuTela = new MenuTela();
-
+        Scanner opcCalculadora = new Scanner(System.in);
+        System.out.println("Você digitou 1 - Calculadora");
         System.out.println("    1.  Adição");
         System.out.println("    2.  Subtração");
         System.out.println("    3.  Multiplicação");
@@ -18,7 +19,7 @@ public class MenuCalculadora {
         System.out.println("Deseja efetuar qual operação: ");
 
        operacao = opcCalculadora.nextInt();
-
+       opcCalculadora.nextLine();
         switch (operacao) {
             case 1:
                 calculadora.somarDoisNumeros();
@@ -40,11 +41,11 @@ public class MenuCalculadora {
                 break;
             case 7:
                 System.out.println("Você escolheu 7.  Retornar ao Menu Inicial");
-                menuTela.iniciarMenu(opcCalculadora);
+                menuTela.iniciarMenu();
                 break;
             default:
                 System.out.println("Opção Inválida!!!");
-                mostrarMenuCalculadora(opcCalculadora);
+                mostrarMenuCalculadora();
         }
     }
 
