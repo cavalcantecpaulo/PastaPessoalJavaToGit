@@ -23,7 +23,7 @@ public class CapturaBasica {
                 System.out.println("Idade Inválida!!!");
             }
         } while (idade < 1 || idade > 130);
-        if (idade > 18 || idade < 130) {
+        if (idade > 18 && idade < 130) {
             System.out.println("Você é " + deMaior + " de idade!!!");
         } else if (idade < 18) {
             System.out.println("Você é " + deMaior + " de idade!!!");
