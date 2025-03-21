@@ -1,0 +1,16 @@
+# Ignora arquivos compilados
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignora pastas de build
+/target/
+/out/
+/bin/
+
+# Ignora arquivos de configuração local
+*.iml
+.idea/
+*.ipr
+*.iws
