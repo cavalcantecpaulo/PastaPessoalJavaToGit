@@ -3,8 +3,8 @@ package ProjetoGeral01;
 import java.util.Scanner;
 
 public class CapturaBasica {
-    String nome, curso, faculdade;
-    int idade;
+    private String nome, curso, faculdade;
+    private int idade;
 
     public void capturarInfos() {
         System.out.println("Você digitou 7 - Captura básica Teste");

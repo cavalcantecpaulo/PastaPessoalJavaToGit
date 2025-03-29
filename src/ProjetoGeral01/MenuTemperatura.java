@@ -7,7 +7,7 @@ public class MenuTemperatura {
         int opcMenuTemperatura;
         Scanner opcConversao = new Scanner(System.in);
         Temperatura temperatura = new Temperatura();
-        ProjetoGeral01.MenuTela menu = new MenuTela();
+        MenuTela menu = new MenuTela();
         System.out.println("Você selecionou 4 - Conversor de temperatura");
         System.out.println("    1.  Converter Celsius para Fahrenheit");
         System.out.println("    2.  Converter Celsius para Kelvin");

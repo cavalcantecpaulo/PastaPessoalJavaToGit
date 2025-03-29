@@ -55,7 +55,7 @@ public class MenuTela {
                 captura.capturarInfos();
                 break;
             case 8:
-                System.out.println("Você digitou 8 - Em desenvolvimento...");
+                System.out.println("8 - Em desenvolvimento...");
                 break;
             case 9:
                 System.out.println("Você digitou 9 - Encerrar Programa");

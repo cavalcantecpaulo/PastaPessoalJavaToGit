@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class MenuCalculadora {
     public void mostrarMenuCalculadora(){
         int operacao;
-        Calculadora calculadora = new Calculadora();
         MenuTela menuTela = new MenuTela();
         Scanner opcCalculadora = new Scanner(System.in);
+        CalculadoraFuncional calculadoraLogica = new CalculadoraFuncional(opcCalculadora);
+
         System.out.println("Você digitou 1 - Calculadora");
         System.out.println("    1.  Adição");
         System.out.println("    2.  Subtração");
@@ -20,24 +21,25 @@ public class MenuCalculadora {
 
        operacao = opcCalculadora.nextInt();
        opcCalculadora.nextLine();
+
         switch (operacao) {
             case 1:
-                calculadora.somarDoisNumeros();
+                calculadoraLogica.somarNumeros();
                 break;
             case 2:
-                calculadora.subtrairDoisNumeros();
+                calculadoraLogica.subtrairNumeros();
                 break;
             case 3:
-                calculadora.multiplicarDoisNumeros();
+                calculadoraLogica.multiplicarNumeros();
                 break;
             case 4:
-                calculadora.dividirDoisNumeros();
+                calculadoraLogica.dividirNumeros();
                 break;
             case 5:
-                calculadora.fatorialNumero();
+                calculadoraLogica.fatorialNumero();
                 break;
             case 6:
-                calculadora.potenciarNumero();
+                calculadoraLogica.potenciarNumero();
                 break;
             case 7:
                 System.out.println("Você escolheu 7.  Retornar ao Menu Inicial");
@@ -48,5 +50,4 @@ public class MenuCalculadora {
                 mostrarMenuCalculadora();
         }
     }
-
 }

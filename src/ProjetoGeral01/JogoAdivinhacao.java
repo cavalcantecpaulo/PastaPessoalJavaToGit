@@ -4,14 +4,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class JogoAdivinhacao {
+    private int numero;
+    private int valorMinimo = 1;
+    private int valorMaximo = 1;
+    private int numerosDigitados [] = new int[100];
+    private int contador = 0;
 
     public void JogarAdivinhacao() {
-        int numero;
-        int valorMinimo = 1;
-        int valorMaximo = 100;
-        int numerosDigitados [] = new int[100];
-        int contador = 0;
-
         Random geradorNumero = new Random();
         int numeroSecreto = geradorNumero.nextInt(100) + 1;
 

@@ -3,12 +3,12 @@ package ProjetoGeral01;
 import java.util.Scanner;
 
 public class DilemaDosPrisioneiros {
-    Scanner entradaDeDecisao = new Scanner(System.in);
-    char prisioneiroA, prisioneiroB;
-    String nomeA = "Camacho";
-    String nomeB = "Vladimir";
-    String escolhaA;
-    String escolhaB;
+    private Scanner entradaDeDecisao = new Scanner(System.in);
+    private char prisioneiroA, prisioneiroB;
+    private String nomeA = "Camacho";
+    private String nomeB = "Vladimir";
+    private String escolhaA;
+    private String escolhaB;
 
     public void miniJogo() {
         System.out.println("\n\nVocê digitou 5 - Dilema dos Prisioneiros");
