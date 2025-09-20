@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class JogoAdivinhacao {
     private int numero;
     private int valorMinimo = 1;
-    private int valorMaximo = 1;
+    private int valorMaximo = 100;
     private int numerosDigitados [] = new int[100];
     private int contador = 0;
 
@@ -47,7 +47,6 @@ public class JogoAdivinhacao {
             for (int i=0; i < contador; i++) {
                     System.out.print("[" + numerosDigitados[i] + "] ");
             }
-
         } while (numero != numeroSecreto);
     }
 }

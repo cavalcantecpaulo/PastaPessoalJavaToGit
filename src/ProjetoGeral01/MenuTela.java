@@ -65,7 +65,6 @@ public class MenuTela {
                 System.out.println("Opção Inválida!");
                 System.out.println("Digite Novamente!");
                 break;
-        }
-        opcInicial.close();
+            }
     }
 }

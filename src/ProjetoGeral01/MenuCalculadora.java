@@ -3,12 +3,12 @@ package ProjetoGeral01;
 import java.util.Scanner;
 
 public class MenuCalculadora {
-    public void mostrarMenuCalculadora(){
+    public void mostrarMenuCalculadora() {
         int operacao;
         MenuTela menuTela = new MenuTela();
         Scanner opcCalculadora = new Scanner(System.in);
         CalculadoraFuncional calculadoraLogica = new CalculadoraFuncional(opcCalculadora);
-
+        do {
         System.out.println("Você digitou 1 - Calculadora");
         System.out.println("    1.  Adição");
         System.out.println("    2.  Subtração");
@@ -19,35 +19,37 @@ public class MenuCalculadora {
         System.out.println("    7.  Retornar ao Menu Inicial");
         System.out.println("Deseja efetuar qual operação: ");
 
-       operacao = opcCalculadora.nextInt();
-       opcCalculadora.nextLine();
+        operacao = opcCalculadora.nextInt();
+        opcCalculadora.nextLine();
 
-        switch (operacao) {
-            case 1:
-                calculadoraLogica.somarNumeros();
-                break;
-            case 2:
-                calculadoraLogica.subtrairNumeros();
-                break;
-            case 3:
-                calculadoraLogica.multiplicarNumeros();
-                break;
-            case 4:
-                calculadoraLogica.dividirNumeros();
-                break;
-            case 5:
-                calculadoraLogica.fatorialNumero();
-                break;
-            case 6:
-                calculadoraLogica.potenciarNumero();
-                break;
-            case 7:
-                System.out.println("Você escolheu 7.  Retornar ao Menu Inicial");
-                menuTela.iniciarMenu();
-                break;
-            default:
-                System.out.println("Opção Inválida!!!");
-                mostrarMenuCalculadora();
-        }
+            switch (operacao) {
+                case 1:
+                    calculadoraLogica.somarNumeros();
+                    break;
+                case 2:
+                    calculadoraLogica.subtrairNumeros();
+                    break;
+                case 3:
+                    calculadoraLogica.multiplicarNumeros();
+                    break;
+                case 4:
+                    calculadoraLogica.dividirNumeros();
+                    break;
+                case 5:
+                    calculadoraLogica.fatorialNumero();
+                    break;
+                case 6:
+                    calculadoraLogica.potenciarNumero();
+                    break;
+                case 7:
+                    System.out.println("Você escolheu 7.  Retornar ao Menu Inicial");
+                    menuTela.iniciarMenu();
+                    break;
+                default:
+                    System.out.println("Opção Inválida!!!");
+                    mostrarMenuCalculadora();
+            }
+        } while (operacao != 7);
     }
 }
+
